@@ -37,4 +37,12 @@ public class LibraryController {
             return list();
         }
     }
+    @GetMapping("/api/search")
+    public List<Book> searchResult(@RequestParam("keywords") String keyword){
+        if("".equals(keyword)){
+            return bookService.list();
+        } else {
+            return bookService.search(keyword);
+        }
+    }
 }

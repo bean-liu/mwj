@@ -7,10 +7,10 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-//@Configuration
+@Configuration
 public class MyWebMvcConfigurer implements WebMvcConfigurer {
 
-    /*@Override
+    @Override
     public void addCorsMappings(CorsRegistry registry) {
         // 跨域问题
         registry.addMapping("/**")
@@ -20,14 +20,14 @@ public class MyWebMvcConfigurer implements WebMvcConfigurer {
                 .maxAge(3600)
                 .allowedHeaders("*");
 
-    }*/
+    }
 
-    public LoginInterceptor getLoginInterceptor(){
+    /*public LoginInterceptor getLoginInterceptor(){
         return new LoginInterceptor();
     }
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(getLoginInterceptor()).addPathPatterns("/**").excludePathPatterns("/index.html");
-    }
+    }*/
 }
