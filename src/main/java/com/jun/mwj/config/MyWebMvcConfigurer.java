@@ -22,6 +22,11 @@ public class MyWebMvcConfigurer implements WebMvcConfigurer {
 
     }
 
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/api/file/**").addResourceLocations("file:d:/upload/");
+    }
+
     /*public LoginInterceptor getLoginInterceptor(){
         return new LoginInterceptor();
     }
